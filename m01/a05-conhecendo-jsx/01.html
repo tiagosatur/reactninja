@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Second React code</title>
+  </head>
+  <body>
+
+    <h1 id="app01"></h1>
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.js"></script>
+
+    <script type="text/javascript">
+
+      // Outra sinxaxe para criaçã ode elementos
+      // Ela possui somente os elementos mais básicos
+      // React.Dom(propriedades[pode ser null], conteúdo do elemento)
+
+      var h1 = React.DOM.h1(null, [
+        React.DOM.span(null, React.DOM.i(null, 'Título nível 1 itálico')),
+        React.DOM.span(null, 'Título nível 2')
+      ])
+      // var h1 = React.createElement('h1', null, 'Hello React Title')
+
+      ReactDOM.render(h1, document.getElementById('app01'))
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>First React code</title>
+  </head>
+  <body>
+
+    <h1>I'm just a HTML element</h1>
+
+    <h1 id="app01"></h1>
+
+    <div id="app02"></div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.js"></script>
+
+
+    <script type="text/javascript">
+    //Criar um servidor estático - npm install -g http-server e depois rodar com o comando http-server
+    // Incluir react via cdn - https://cdnjs.com
+    // Criar um elemento com react
+
+    // React.createElement cria qualquer tipo de elemento
+      var title01 = React.createElement('h1', null, 'Hello React Title')
+      var button = React.createElement('button', null, 'Next')
+
+      ReactDOM.render(title01, document.getElementById('app01'))
+      // ReactDOM.render(button, document.getElementById('app2'))
+
+      //Criar um elemento aninhado
+      var block = React.createElement('div', null, [
+        React.createElement(
+          'span',
+          null,
+          'Texto do span'
+        ),
+        React.createElement(
+          'button',
+          null,
+          'Next slide'
+        ),
+      React.createElement('article',null, 'This is an article'),
+      React.createElement('nav', null, 'This is a navigation element')]
+      )
+
+      ReactDOM.render(block, document.getElementById('app02'))
+    </script>
+
+  </body>
+</html>

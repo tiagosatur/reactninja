@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Second React code</title>
+  </head>
+  <body>
+
+    <div id="app01"></div>
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
+
+    <script type="text/babel">
+
+      // createClass é utilizado no ecmascript 5
+      // é preciso utilizar o método render
+      // é possível aninhar também
+      // Quando o js encontra uma quebra, adiciona autaticamente ponto e virgula. Então após o return, sempre tem que haver algum código.
+      // Duas formas de resolver: ou deixa o h1 na mesma linha, ou utiliza parentesis no return.
+      //Os componentes do react começam com letras Maiusculas para diferenciar de tags padrão
+      // o método createClass recebe como parâmetro um objeto {}, o qual precisa ter no mínimo um métdo chamado render ()
+
+      var Title = React.createClass({
+        render: function() {
+          // return <h1>Hellow world title</h1>
+          return (
+            <h1>
+              <span>Its not a bug, its a feature</span>
+            </h1>
+
+            // Não é possível quebrar o código assim:
+            // return(<h1>Título</h1>
+            //   <span>Its not a bug, its a feature</span>
+            // )
+            // Isso é a mesma coisa que tentar retornar duas funções ao mesmo tempo
+            // Só pode retornar uma única tag, ou seja, colocar uma tag (div) que envolva tudo assim:
+            // return(
+            //   <div>
+            //     <h1>Título</h1>
+            //     <span>Its not a bug, its a feature</span>
+            //   </div>
+            // )
+
+
+        }
+      })
+
+      ReactDOM.render(
+        <Title />,
+        document.getElementById('app01')
+      )
+    </script>
+
+  </body>
+</html>
