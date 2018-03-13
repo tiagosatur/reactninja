@@ -16,7 +16,7 @@ module.exports = {
 		path.join(__dirname, 'src', 'index')
 	],
 
-  // local onde será gerado o arquivo de saída
+	// local onde será gerado o arquivo de saída
 	output: {
 		path: path.join(__dirname, 'dist'),
 		filename: 'bundle.js',
@@ -24,7 +24,9 @@ module.exports = {
 	},
 
 	plugins: [
+		new webpack.NamedModulesPlugin(),
 		new webpack.HotModuleReplacementPlugin()
+
 	],
 
 	module: {

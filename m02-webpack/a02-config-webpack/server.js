@@ -6,7 +6,8 @@ const config = require('./webpack.config')
 
 
 new WebpackDevServer(webpack(config), {
-	publickPath: config.output.publicPath,
+	publicPath: config.output.publicPath,
+	contentBase: "dist/",
 	hot: true,
 	historyApiFallback: true,
 	stats: {colors: true}
