@@ -1,5 +1,5 @@
 'use strict'
-import React, {Component} from 'react';
+import React, { Component } from 'react'
 
 class Title extends Component {
 	render() {
@@ -11,4 +11,4 @@ class Title extends Component {
 }
 
 // module.exports = Title
-export default Title; //Padrão ecmascript 2015
+export default Title //Padrão ecmascript 2015
