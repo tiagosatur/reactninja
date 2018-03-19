@@ -1,14 +1,15 @@
 'use strict'
 import React, { Component } from 'react'
+import './style/main.sass'
 
-class Title extends Component {
+class App extends Component {
 	render() {
 		return (
 			// React.createElement('h1', null, 'Título')
-			<h1>Título jsx</h1>
+			<h1>Your first app</h1>
 		)
 	}
 }
 
 // module.exports = Title
-export default Title //Padrão ecmascript 2015
+export default App //Padrão ecmascript 2015
