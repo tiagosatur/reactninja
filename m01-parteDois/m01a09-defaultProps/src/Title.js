@@ -19,15 +19,15 @@ class Title extends Component {
 
 	render() {
 		return (
-			{/*
-				<h1>Olá {this.props.name} {this.props.lastname}</h1>
-			*/}
-			{/*<h1>Olá
-				{this.props.name
-				this.props.lastname.first
-				this.props.lastname.last}
-			!</h1>
-			*/}
+
+			// <h1>Olá {this.props.name} {this.props.lastname}</h1>
+
+			// <h1>Olá
+			// 	{this.props.name
+			// 	this.props.lastname.first
+			// 	this.props.lastname.last}
+			// !</h1>
+
 			<h1>Olá {this.props.name} {this.props.lastname}</h1>
 
 		)
