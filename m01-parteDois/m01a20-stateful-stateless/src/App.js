@@ -11,14 +11,29 @@ class App extends Component {
 			color: 'green'
 		}
 	}
+
+	handleClick(buttonColor) {
+		this.setState({color: '#000'})
+	}
+	// Como o nome da propriedade é o mesmo nome da variavel color, posso usar só color ES6
 	render() {
 		return (
 			<div className="container">
 				<Square color={this.state.color} />
 
-				<Button color="red">Vermelho</Button>
-				<Button>Verde</Button>
-				<Button>Azul</Button>
+				{['red', 'green', 'blue'].map((color) => (
+					<Button
+						key={color}
+						onClick={ (e) => this.setState( {color})}>
+						{color}
+					</Button>
+				))}
+
+
+					<Button onClick={(e) => this.handleClick('pink')}
+					>
+					Pink
+					</Button>
 			</div>
 		)
 	}

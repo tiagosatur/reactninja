@@ -40,7 +40,7 @@ module.exports = {
 				include: /src/,
 				loader: 'babel'
 			},
-			
+
 			{
 				test: /\.s?(a|c)ss/,
 				loaders: ['style', 'css', 'sass']
