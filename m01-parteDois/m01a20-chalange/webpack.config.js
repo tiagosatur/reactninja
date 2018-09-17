@@ -22,8 +22,7 @@ module.exports = {
 
 	plugins: [
 		new webpack.NamedModulesPlugin(),
-		new webpack.HotModuleReplacementPlugin(),
-		new SpriteLoaderPlugin()
+		new webpack.HotModuleReplacementPlugin()
 	],
 
 	module: {

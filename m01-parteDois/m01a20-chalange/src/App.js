@@ -2,7 +2,6 @@
 import React, { Component } from 'react'
 import Button from './button'
 import Square from './square'
-import Icon from './icon'
 import './style/main.sass'
 
 class App extends Component {
@@ -31,10 +30,6 @@ class App extends Component {
 					<Button key={index} changeColor={this.changeColor} color={color}>
 						{color}
 					</Button>
-				))}
-
-				{['cama', 'casa', 'comoda', 'sofa', 'sol'].map((icon, index) => (
-					<Icon key={index} icon={icon} />
 				))}
 			</div>
 		)
