@@ -14,13 +14,24 @@ class Timer extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log('componentWillReceiveProps - ', this.props, nextProps)
+    // Pode-se usar o this.setState nesse lifecycle, pois sabemos que aqui é o moment
+    // em que o componente vai receber novas propriedades, então atualizamos o state
+    // antes que o componente seja renderizado
+    console.log('componentWillReceiveProps Timer - ', this.props, nextProps)
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    console.log('shouldComponentUpdate - ', this.props, nextProps)
+    console.log('shouldComponentUpdate Timer - ', this.props, nextProps)
     // return true
     return this.state.time !== nextProps.time
+  }
+
+  componentWillUpdate(nextProps, nextState) {
+    // Executa um pouco antes do componente renderizar novamente
+    // não pode usar o this.setState
+    //
+    console.log('componentWillUpdate Timer - ', this.props, nextProps)
+
   }
 
   //componentDidMount e setTimeout executam somente uma vez, então uso setInterval

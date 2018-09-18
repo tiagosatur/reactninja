@@ -13,18 +13,22 @@ class App extends Component {
     }
   }
 
+  // Temos os métodos de montagem/desmontagem e os métodos de atualização.
+  // Os primeiros são executados quando o componente é montado, executam uma única vez.
+  // Os últimos são executados quando o componente é de fato atualizado. Executam sempre que o componente for renderizado.
+
   componentWillMount() {
     //Esse método executa do lado do servidor, não se deve fazer manipulação de DOM nele.
-    console.log('componentWillMount --')
+    console.log('componentWillMount App --')
   }
 
   componentDidMount() {
     // Muito utilizado para bibliotecas externas que manipulam o DOM
-    console.log('componentDidMount = montar significa que está no DOM')
+    console.log('componentDidMount App = montar significa que está no DOM')
   }
 
   render() {
-    console.info('renderizou')
+    console.info('renderizou App')
     return (
       <div className="container">
         <Timer time={this.state.time} />
