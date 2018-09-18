@@ -8,6 +8,7 @@ class App extends Component {
     console.log('constructor')
     super()
     this.state = {
+      time: 0,
       showTimer: true
     }
   }
@@ -26,16 +27,17 @@ class App extends Component {
     console.info('renderizou')
     return (
       <div className="container">
-        {this.state.showTimer && <Timer />}
+        <Timer time={this.state.time} />
 
         <button
           onClick={() => {
             this.setState({
-              showTimer: !this.state.showTimer
+              // showTimer: !this.state.showTimer
+              time: this.state.time + 10
             })
           }}
           >
-            Toggle timer
+            Change props
         </button>
       </div>
     )

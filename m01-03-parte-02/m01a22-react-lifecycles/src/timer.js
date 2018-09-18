@@ -13,6 +13,10 @@ class Timer extends Component {
     this.timer
   }
 
+  componentWillReceiveProps(nextProps) {
+    console.log('componentWillReceiveProps - ', this.props, nextProps)
+  } 
+
   //componentDidMount e setTimeout executam somente uma vez, então uso setInterval
   componentDidMount () {
     const timer = setInterval (() =>
@@ -23,7 +27,7 @@ class Timer extends Component {
 
   // Se vc tem alguma manipulação de DOM,
   // ou atrelou algum evento manualmente no componentDidMount (como um timer)
-  // você pode remover esses eventos quando desmontar for o componente no componentWillUnmount 
+  // você pode remover esses eventos quando desmontar for o componente no componentWillUnmount
   // Warning: Can only update a mounted or mounting component. This usually means you called setState, replaceState, or forceUpdate on an unmounted component. This is a no-op.
   componentWillUnmount() {
     clearInterval(this.timer)
