@@ -31,7 +31,6 @@ class Timer extends Component {
     // não pode usar o this.setState
     //
     console.log('componentWillUpdate Timer - ', this.props, nextProps)
-
   }
 
   //componentDidMount e setTimeout executam somente uma vez, então uso setInterval
@@ -40,6 +39,10 @@ class Timer extends Component {
       this.setState ({
       time: this.state.time + 1
     }), 1000)
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log('componentDidUpdate Timer -- ', this.props, prevProps)
   }
 
   // Se vc tem alguma manipulação de DOM,
