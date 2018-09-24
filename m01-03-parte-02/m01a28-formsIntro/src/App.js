@@ -8,7 +8,8 @@ class App extends Component {
 		this.state = {
 			value: 'Valor inicial',
 			checked: false,
-			radioValue: 'Valor do radio'
+			radioValue: 'Valor do radio',
+			selectValue: 2,
 		}
 	}
 	render() {
@@ -114,7 +115,26 @@ class App extends Component {
 							defaultChecked
 						/>
 					</label>
+				</form>
 
+				<h2>Select</h2>
+				<form>
+				<h3>Controlled select</h3>
+
+				{/*
+					No react é possível passar o selected value direto no select.
+					Também é possível usar o parametro multiple para que seja
+					selecionada mais de uma opção.
+				*/}
+					<select value={this.state.value} onChange={(e) => {
+						this.setState({
+							selectValue: e.target.value
+						})
+					}}>
+						<option value="1">Opção 1</option>
+						<option value="2">Opção 2</option>
+						<option value="3">Opção 3</option>
+					</select>
 				</form>
 			</div>
 		)
