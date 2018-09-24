@@ -18,7 +18,8 @@ class App extends Component {
 				<h1>Intro to Forms</h1>
 				<h2>Input text</h2>
 				<form action="">
-					{/* Não é possível editar o value inicial de um input porque qualquer
+					{/*
+						Não é possível editar o value inicial de um input porque qualquer
 						componente react será renderizado e manterá aquele estado na forma
 						como foi gerado inicialmente. Para modificar esse valor vc deve
 						utilizar o método onchange, e num componente statefull, usar o estado
@@ -48,17 +49,15 @@ class App extends Component {
 						}}
 					/>
 
-
 					{/*
 						Caso vc queira utilizar um uncontroled component e mesmo assim passar
 						um valor inicial pra ele é possível usar o defaultValue. Ele será statefull.
 					*/}
 					<input type="text" defaultValue='Valor inicial'/>
-
 				</form>
 
 
-				<h2>Checkbox</h2>
+				<h2>Checkbox</h2>}
 				<form action="">
 					<h3>Controlled checkbox</h3>
 					<label>
@@ -69,7 +68,7 @@ class App extends Component {
 							checked={this.state.checked}
 							onChange={(e) => {
 								this.setState({
-									//As duas formas funcionam
+									//As duas formas funcionam: com state ou target
 									checked: !this.state.checked
 									//checked: e.target.checked //Se negar, vc estará voltando ao estado anterior
 								})
@@ -142,6 +141,38 @@ class App extends Component {
 						ou value. O value precisa ter o onChange para que o valor possa ser modificado.
 					*/}
 					<textarea defaultValue={'Valor padrão \ncom uma quebra de linha'} />
+				</form>
+
+				<h2>Eventos disponíveis para formulários</h2>
+				{/*
+					onSubmit, onChange, onInput
+
+					onSubmit:
+						Se colocar name no textarea (sem preventDefault) vai enviar o elemento via get.
+						Resultado url = http://localhost:3000/?mytextarea=Valor+padr%C3%A3o+%0D%0Acom+uma+quebra+de+linha
+						Utilizando o e.preventDefault o formulário não é enviado e vc pode manipular dos dados.
+
+					onChange:
+						Consegue pegar o valor do campo.
+						É possível pegar o onchange em cada um dos inputs.
+
+						No checkbox ou radio, tanto faz utilizar onClick ou onChange (preferencialmente)
+
+				*/}
+				<form
+					onSubmit={(e) => {
+						e.preventDefault()
+						console.log('event', e);
+					}}
+					onChange={(e) => {
+						console.log('name', e.target.name)
+						console.log('name', e.target.value)
+					}}
+				>
+					<input type='name' name='name' />
+					<input type='email' name='email' />
+					<textarea name='mytextarea' defaultValue={'Valor padrão \ncom uma quebra de linha'} />
+					<button type='submit'>Enviar</button>
 				</form>
 			</div>
 		)
