@@ -119,13 +119,11 @@ class App extends Component {
 
 				<h2>Select</h2>
 				<form>
-				<h3>Controlled select</h3>
-
-				{/*
-					No react é possível passar o selected value direto no select.
-					Também é possível usar o parametro multiple para que seja
-					selecionada mais de uma opção.
-				*/}
+					{/*
+						No react é possível passar o selected value direto no select.
+						Também é possível usar o parametro multiple para que seja
+						selecionada mais de uma opção.
+					*/}
 					<select value={this.state.value} onChange={(e) => {
 						this.setState({
 							selectValue: e.target.value
@@ -135,6 +133,15 @@ class App extends Component {
 						<option value="2">Opção 2</option>
 						<option value="3">Opção 3</option>
 					</select>
+				</form>
+
+				<h2>Textarea</h2>
+				<form>
+					{/*
+						Se precisar usar um valor padrão dentro do textarea, usar defaultValue
+						ou value. O value precisa ter o onChange para que o valor possa ser modificado.
+					*/}
+					<textarea defaultValue={'Valor padrão \ncom uma quebra de linha'} />
 				</form>
 			</div>
 		)
