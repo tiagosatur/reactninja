@@ -1,0 +1,25 @@
+* {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+button {
+  border: 0;
+  border-radius: 2px;
+  background-color: #ccc;
+  color: #222;
+  padding: 8px;
+  margin: 2px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+.App {
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
