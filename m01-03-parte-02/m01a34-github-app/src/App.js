@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import Search from './components/Search';
+import UserInfo from './components/UserInfo';
+import Actions from './components/Actions';
+import Repos from './components/Repos';
 import './App.css';
 
 class App extends Component {
@@ -7,48 +10,26 @@ class App extends Component {
     return (
       <div className="App">
 
-          <div className='user-info'>
-            {/* <img src="https://avatars1.githubusercontent.com/u/24196412?v=4" alt="Avatar"/> */}
+          <div className='container'>
 
 
             <Search />
 
-            <div className='main d-flex justify-content-between p-01'>
-              <div className='avatar'>
-                <img src="https://dummyimage.com/200x200/ffffff/000000" alt="Avatar"/>
-              </div>
-
-              <div className='user-infos'>
-                <h2>
-                  <a target='_blank' title='Visit my Github profile' href="https://github.com/tiagosatur">Tiago Satur</a>
-                </h2>
-
-                <ul className='repos-info'>
-                  <li>Repositórios: 22</li>
-                  <li>Seguidores: 6</li>
-                  <li>Seguindo: 13</li>
-                </ul>
-              </div>
-              </div>
+            <UserInfo />
+            <Actions />
+            <Repos
+              className='repos'
+              title='Repositórios'
+              repos={[{
+                name: 'Nome do repositório',
+                link: '#'
+                },{
+                name: 'Nome do repositório',
+                link: '#'
+              }]}
+              />
 
 
-            <div className='actions d-flex justify-content-between p-01'>
-              <button>Ver repositórios</button>
-              <button>Ver favoritos</button>
-            </div>
-
-
-
-
-            <div className='repos'>
-              <h2>Repositórios:</h2>
-              <ul>
-                <li><a href="#">Nome do repositório</a></li>
-                <li><a href="#">Nome do repositório</a></li>
-                <li><a href="#">Nome do repositório</a></li>
-                <li><a href="#">Nome do repositório</a></li>
-              </ul>
-            </div>
 
             <div className='starred'>
               <h2>Favoritos:</h2>

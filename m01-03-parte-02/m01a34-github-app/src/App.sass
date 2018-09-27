@@ -1,57 +1,77 @@
+$c-primary: #696969
+$c-featured: DarkGoldenRod
+$c-bg-app: #f5f5f5
+$breakpoint-sm: 768px
+
+
 *
-  color: #ddd
+  color: $c-primary
 
 a
   text-decoration: none
 
 button
-  border: 1px solid white
+  border: 1px solid $c-primary
   border-radius: 2px
   background-color: transparent
-  color: white
+  color: $c-primary
   cursor: pointer
   padding: 8px
   margin: 2px
   transition: all .4s
 
   &:hover
-    color: DarkGoldenRod
-    border-color: DarkGoldenRod
+    color: $c-featured
+    border-color: $c-featured
 
 input
   background: transparent
   border: 0
-  border-bottom: 1px solid white
+  border-bottom: 1px solid $c-primary
   border-radius: 2px
   outline: none
   transition: all .4s
 
   &:focus
-    border-color: DarkGoldenRod
+    border-color: $c-featured
 
     &::placeholder
-      color: DarkGoldenRod
+      color: $c-featured
 
   &::placeholder
-    color: white
+    color: $c-primary
 
 ul
   list-style: none
   padding: 0
 
-.App
-  background-color: #222
 
-.user-info
+
+.App
+  background-color: $c-bg-app
+
+.container
   max-width: 400px
   margin: 0 auto
+
+  @media (min-width: $breakpoint-sm)
+    max-width: 600px
+
 
 .search
 
   input
-    color: #ccc
+    color: $c-primary
     padding: 0.5rem
     width: 100%
+
+.flex-column
+  flex-direction: column
+
+.flex-row
+  &-sm
+    @media(min-width: $breakpoint-sm)
+      flex-direction: row
 
 .actions
   button
@@ -63,7 +83,7 @@ ul
     transition: all .4s
 
     &:hover
-      color: DarkGoldenRod
+      color: $c-featured
 
 
 .d-flex
@@ -72,9 +92,27 @@ ul
 .justify-content-center
   justify-content: center
 
+.align-items-center
+  align-items: center
+
 .justify-content-between
   justify-content: space-between
 
+  &-sm
+    @media (min-width: $breakpoint-sm)
+      justify-content: space-between
+
+.w-30
+  width: 50%
+  &-sm
+    @media (min-width: $breakpoint-sm)
+      width: 50%
+
+.w-70
+  width: 70%
+  &-sm
+    @media (min-width: $breakpoint-sm)
+      width: 70%
 .p-01
   padding: 0.5rem
 
