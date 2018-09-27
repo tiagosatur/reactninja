@@ -9,6 +9,7 @@ $breakpoint-sm: 768px
 
 a
   text-decoration: none
+	color: inherit
 
 button
   border: 1px solid $c-primary
@@ -78,7 +79,7 @@ ul
     width: 50%
 
 .repos,
-.starred
+.stared
   a
     transition: all .4s
 
@@ -102,6 +103,11 @@ ul
     @media (min-width: $breakpoint-sm)
       justify-content: space-between
 
+.fs-14
+	font-size: 14px
+
+.text-featured
+	color: $c-featured !important
 .w-30
   width: 50%
   &-sm

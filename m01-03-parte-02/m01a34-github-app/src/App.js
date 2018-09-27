@@ -18,28 +18,31 @@ class App extends Component {
             <UserInfo />
             <Actions />
             <Repos
-              className='repos'
-              title='Repositórios'
+              className='repos p-01'
+              title='Repositories'
               repos={[{
-                name: 'Nome do repositório',
+                name: 'Repository name',
                 link: '#'
                 },{
-                name: 'Nome do repositório',
+                name: 'Repository name',
                 link: '#'
               }]}
               />
 
-
-
-            <div className='starred'>
-              <h2>Favoritos:</h2>
-              <ul>
-                <li><a href="#">Nome do favorito</a></li>
-                <li><a href="#">Nome do favorito</a></li>
-                <li><a href="#">Nome do favorito</a></li>
-                <li><a href="#">Nome do favorito</a></li>
-              </ul>
-            </div>
+							<Repos
+								className='stared p-01'
+								title='Favorites'
+								repos={[
+									{
+										name: 'Stared repository',
+										link: '#'
+									},
+									{
+										name: 'Stared repository',
+										link: '#'
+									}
+								]}
+							/>
 
           </div>
 

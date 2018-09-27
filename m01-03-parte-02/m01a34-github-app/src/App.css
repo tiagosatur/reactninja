@@ -61,10 +61,10 @@ ul {
   width: 50%; }
 
 .repos a,
-.starred a {
+.stared a {
   transition: all .4s; }
   .repos a:hover,
-  .starred a:hover {
+  .stared a:hover {
     color: DarkGoldenRod; }
 
 .d-flex {
@@ -81,6 +81,12 @@ ul {
   @media (min-width: 768px) {
     .justify-content-between-sm {
       justify-content: space-between; } }
+
+.fs-14 {
+  font-size: 14px; }
+
+.text-featured {
+  color: DarkGoldenRod !important; }
 
 .w-30 {
   width: 50%; }

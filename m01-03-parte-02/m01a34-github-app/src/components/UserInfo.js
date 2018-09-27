@@ -9,10 +9,10 @@ const UserInfo = () => (
 
     <div className='user-data d-flex flex-column w-70-sm'>
       <h2 className='d-flex justify-content-center'>
-        <a target='_blank' title='Visit my Github profile' href="https://github.com/tiagosatur">Tiago Satur</a>
+        <a target='_blank' className=' text-featured' title='Visit my Github profile' href="https://github.com/tiagosatur">Tiago Satur</a>
       </h2>
 
-      <ul className='repos-info d-flex flex-column align-items-center'>
+      <ul className='repos-info d-flex flex-column align-items-center fs-14 text-featured'>
         <li className='d-flex flex-column justify-content-center'>Repositórios: 22</li>
         <li>Seguidores: 6</li>
         <li>Seguindo: 13</li>
