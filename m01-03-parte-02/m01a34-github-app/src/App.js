@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Search from './components/Search';
 import './App.css';
 
 class App extends Component {
@@ -9,11 +9,9 @@ class App extends Component {
 
           <div className='user-info'>
             {/* <img src="https://avatars1.githubusercontent.com/u/24196412?v=4" alt="Avatar"/> */}
-            <div className='search p-01 mb-02'>
-              <input type="text" placeholder='O que você procura?'/>
-            </div>
 
 
+            <Search />
 
             <div className='main d-flex justify-content-between p-01'>
               <div className='avatar'>
@@ -22,7 +20,7 @@ class App extends Component {
 
               <div className='user-infos'>
                 <h2>
-                  <a href="https://github.com/tiagosatur">Tiago Satur</a>
+                  <a target='_blank' title='Visit my Github profile' href="https://github.com/tiagosatur">Tiago Satur</a>
                 </h2>
 
                 <ul className='repos-info'>
