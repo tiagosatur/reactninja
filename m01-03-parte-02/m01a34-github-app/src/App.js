@@ -1,52 +1,30 @@
 import React, { Component } from 'react';
-import Search from './components/Search';
-import UserInfo from './components/UserInfo';
-import Actions from './components/Actions';
-import Repos from './components/Repos';
+import AppContent from './components/AppContent';
 import './App.css';
 
+/*
+** Presentational/Dumb components
+Componentes que apenas apresentam as informações,
+ não possuem e nem modificam estados, não sabem o que devem fazer.
+ A única coisa que sabem é que devem renderizar propriedades
+
+Smart Components
+  Possuem e manipulam estado
+
+*/
+
+
 class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+
+    }
+  }
+
   render() {
     return (
-      <div className="App">
-
-          <div className='container'>
-
-
-            <Search />
-
-            <UserInfo />
-            <Actions />
-            <Repos
-              className='repos p-01'
-              title='Repositories'
-              repos={[{
-                name: 'Repository name',
-                link: '#'
-                },{
-                name: 'Repository name',
-                link: '#'
-              }]}
-              />
-
-							<Repos
-								className='stared p-01'
-								title='Favorites'
-								repos={[
-									{
-										name: 'Stared repository',
-										link: '#'
-									},
-									{
-										name: 'Stared repository',
-										link: '#'
-									}
-								]}
-							/>
-
-          </div>
-
-      </div>
+      <AppContent />
     );
   }
 }
