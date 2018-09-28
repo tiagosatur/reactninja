@@ -18,13 +18,44 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
+      userinfo: {
+        image: 'https://dummyimage.com/200x200/ffffff/000000',
+        name: 'Tiago Satur',
+        repos: 25,
+        followers: 6,
+        following: 13,
+      },
+      repos: [
+        {
+          name: 'Repository name',
+          link: '#'
+        },
+        {
+        name: 'Repository name',
+        link: '#'
+        }
+      ],
+      stared: [
+        {
+          name: 'Stared repository',
+          link: '#'
+        },
+        {
+          name: 'Stared repository',
+          link: '#'
+        }
+      ],
 
     }
   }
 
   render() {
     return (
-      <AppContent />
+      <AppContent
+        userinfo={this.state.userinfo}
+        repos={this.state.repos}
+        stared={this.state.stared}
+      />
     );
   }
 }

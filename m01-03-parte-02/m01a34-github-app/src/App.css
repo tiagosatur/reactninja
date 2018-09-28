@@ -41,7 +41,7 @@ ul {
 .container {
   max-width: 400px;
   margin: 0 auto; }
-  @media (min-width: 768px) {
+  @media (min-width: 650px) {
     .container {
       max-width: 600px; } }
 
@@ -53,7 +53,7 @@ ul {
 .flex-column {
   flex-direction: column; }
 
-@media (min-width: 768px) {
+@media (min-width: 650px) {
   .flex-row-sm {
     flex-direction: row; } }
 
@@ -78,7 +78,7 @@ ul {
 
 .justify-content-between {
   justify-content: space-between; }
-  @media (min-width: 768px) {
+  @media (min-width: 650px) {
     .justify-content-between-sm {
       justify-content: space-between; } }
 
@@ -90,18 +90,30 @@ ul {
 
 .w-30 {
   width: 50%; }
-  @media (min-width: 768px) {
+  @media (min-width: 650px) {
     .w-30-sm {
       width: 50%; } }
 
 .w-70 {
   width: 70%; }
-  @media (min-width: 768px) {
+  @media (min-width: 650px) {
     .w-70-sm {
       width: 70%; } }
 
 .p-01 {
   padding: 0.5rem; }
+
+.p-02 {
+  padding: 1rem; }
+
+.p-03 {
+  padding: 1.5rem; }
+
+.p-04 {
+  padding: 2rem; }
+
+.p-05 {
+  padding: 2.5rem; }
 
 .mb-02 {
   margin-bottom: 1.5rem; }
