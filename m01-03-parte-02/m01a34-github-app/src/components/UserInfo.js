@@ -15,15 +15,9 @@ const UserInfo = ({ userinfo }) => (
       </h2>
 
       <ul className='repos-info d-flex flex-column align-items-center fs-14 text-featured'>
-<<<<<<< 99668f9c627c3731889730f407a4b7f60ffa6323
-        <li className='d-flex flex-column justify-content-center'>Repositórios: {userinfo.repos}</li>
-        <li>Seguidores: {userinfo.followers}</li>
-        <li>Seguindo: {userinfo.following}</li>
-=======
         <li className='d-flex flex-column justify-content-center'>Repositories: {userinfo.repos}</li>
         <li>Followers: {userinfo.followers}</li>
         <li>Following: {userinfo.following}</li>
->>>>>>> Componentize the application, and pass state to them via props, translate
       </ul>
     </div>
   </div>
