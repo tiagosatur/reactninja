@@ -14,7 +14,7 @@ const AppContent = ({ userinfo, repos, stared }) => (
         <Search />
 
         {/*
-          Precisa que esse valor seja transformado em booleano.
+          Precisamos que esse valor seja transformado em booleano.
           Estamos passando null pelo state. Mas por acaso se for qualquer outro valor
           diferente de null (como um zero), esse valor será impresso na tela.
           Então é preciso, caso esse valor não seja booleano (true ou false),
@@ -22,7 +22,7 @@ const AppContent = ({ userinfo, repos, stared }) => (
           curto circuito
         */}
         {!!userinfo && <UserInfo userinfo={userinfo} />}
-        {!!userinfo && <Actions  />}
+        {!!userinfo && <Actions />}
 
         {/* Repos será um array. Se não for passado será um array em branco (por isso o length) */}
         {!!repos.length && <Repos

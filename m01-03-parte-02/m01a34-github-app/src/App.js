@@ -21,6 +21,7 @@ class App extends Component {
       userinfo: {
         image: 'https://dummyimage.com/200x200/ffffff/000000',
         name: 'Tiago Satur',
+        username: 'tiagosatur',
         repos: 25,
         followers: 6,
         following: 13,
