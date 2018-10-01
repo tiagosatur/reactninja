@@ -67,10 +67,10 @@ ul {
   width: 50%; }
 
 .repos a,
-.stared a {
+.starred a {
   transition: all .4s; }
   .repos a:hover,
-  .stared a:hover {
+  .starred a:hover {
     color: DarkGoldenRod; }
 
 .d-flex {

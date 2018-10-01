@@ -5,7 +5,14 @@ import UserInfo from './UserInfo';
 import Actions from './Actions';
 import Repos from './Repos';
 
-const AppContent = ({ userinfo, repos, stared, handleSearch }) => (
+const AppContent = ({
+	userinfo,
+	repos,
+	starred,
+	handleSearch,
+	getRepos,
+	getStarred,
+}) => (
   <div className="App">
 
       <div className='container'>
@@ -22,7 +29,7 @@ const AppContent = ({ userinfo, repos, stared, handleSearch }) => (
           curto circuito
         */}
         {!!userinfo && <UserInfo userinfo={userinfo} />}
-        {!!userinfo && <Actions />}
+        {!!userinfo && <Actions getRepos={getRepos} getStarred={getStarred} />}
 
         {/* Repos será um array. Se não for passado será um array em branco (por isso o length) */}
         {!!repos.length && <Repos
@@ -31,10 +38,10 @@ const AppContent = ({ userinfo, repos, stared, handleSearch }) => (
           repos={repos}
         />}
 
-        {!!stared.length && <Repos
-          className='stared p-01'
+        {!!starred.length && <Repos
+          className='starred p-01'
           title='Favorites'
-          repos={stared}
+          repos={starred}
         />}
       </div>
   </div>
@@ -43,7 +50,7 @@ const AppContent = ({ userinfo, repos, stared, handleSearch }) => (
 AppContent.propTypes = {
   userinfo: propTypes.object,
   repos: propTypes.array.isRequired,
-  stared : propTypes.array.isRequired
+  starred : propTypes.array.isRequired
 }
 
 export default AppContent

@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Actions = () => (
+const Actions = ({ getRepos, getStarred }) => (
   <div className='actions d-flex justify-content-between p-01'>
-    <button>See repositories</button>
-    <button>See favorites</button>
+    <button onClick={getRepos}>See repositories</button>
+    <button onClick={getStarred}>See favorites</button>
   </div>
 )
 

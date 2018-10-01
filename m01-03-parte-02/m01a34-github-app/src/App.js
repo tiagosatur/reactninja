@@ -30,6 +30,7 @@ class App extends Component {
     const value = e.target.value
     const keyCode = e.which || e.keyCode
     const ENTER = 13
+
     if(keyCode === ENTER) {
       ajax().get(`https://api.github.com/users/${value}`)
         .then((result) => {
@@ -48,13 +49,37 @@ class App extends Component {
     console.log(keyCode)
   }
 
+	getRepos(type) {
+		// This function will return other function to the prop
+		// We'll user arrow function so that we can use this.setState()
+		return (e) => {
+
+			console.log(type)
+
+			ajax().get(`https://api.github.com/users/${this.state.userinfo.username}/${type}`)
+				.then((result) => {
+					this.setState({
+						[type]: [{
+							id: result[0].id,
+							name: result[0].name,
+							link: result[0].html_url
+						}]
+					})
+				})
+		}
+	}
+
+
+
   render() {
     return (
       <AppContent
         userinfo={this.state.userinfo}
         repos={this.state.repos}
-        stared={this.state.stared}
+        starred={this.state.stared}
         handleSearch={(e) => this.handleSearch(e)}
+				getRepos={this.getRepos('repos')}
+				getStarred={this.getRepos('starred')}
       />
     );
   }
