@@ -5,13 +5,13 @@ import UserInfo from './UserInfo';
 import Actions from './Actions';
 import Repos from './Repos';
 
-const AppContent = ({ userinfo, repos, stared }) => (
+const AppContent = ({ userinfo, repos, stared, handleSearch }) => (
   <div className="App">
 
       <div className='container'>
 
 
-        <Search />
+        <Search handleSearch={handleSearch} />
 
         {/*
           Precisamos que esse valor seja transformado em booleano.

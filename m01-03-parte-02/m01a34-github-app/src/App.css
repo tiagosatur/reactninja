@@ -50,6 +50,12 @@ ul {
   padding: 0.5rem;
   width: 100%; }
 
+.avatar img {
+  height: auto;
+  max-width: 300px;
+  max-height: 250px;
+  width: auto; }
+
 .flex-column {
   flex-direction: column; }
 

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ajax from '@fdaciuk/ajax'
 import AppContent from './components/AppContent';
 import './App.css';
 
@@ -18,36 +19,33 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      userinfo: {
-        image: 'https://dummyimage.com/200x200/ffffff/000000',
-        name: 'Tiago Satur',
-        username: 'tiagosatur',
-        repos: 25,
-        followers: 6,
-        following: 13,
-      },
-      repos: [
-        {
-          name: 'Repository name',
-          link: '#'
-        },
-        {
-        name: 'Repository name',
-        link: '#'
-        }
-      ],
-      stared: [
-        {
-          name: 'Stared repository',
-          link: '#'
-        },
-        {
-          name: 'Stared repository',
-          link: '#'
-        }
-      ],
+      userinfo: null,
+      repos: [],
+      stared: [],
 
     }
+  }
+
+  handleSearch(e) {
+    const value = e.target.value
+    const keyCode = e.which || e.keyCode
+    const ENTER = 13
+    if(keyCode === ENTER) {
+      ajax().get(`https://api.github.com/users/${value}`)
+        .then((result) => {
+          this.setState({
+            userinfo: {
+              image: result.avatar_url,
+              name: result.name,
+              username: result.login,
+              repos: result.public_repos,
+              followers: result.followers,
+              following: result.following,
+            }
+          })
+        })
+    }
+    console.log(keyCode)
   }
 
   render() {
@@ -56,6 +54,7 @@ class App extends Component {
         userinfo={this.state.userinfo}
         repos={this.state.repos}
         stared={this.state.stared}
+        handleSearch={(e) => this.handleSearch(e)}
       />
     );
   }
