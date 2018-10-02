@@ -73,6 +73,16 @@ ul {
   .starred a:hover {
     color: DarkGoldenRod; }
 
+.repo__list {
+  display: flex;
+  flex-flow: column;
+  list-style: disc;
+  margin-left: 32px; }
+
+.repo__item a {
+  display: flex;
+  padding: 8px 0; }
+
 .d-flex {
   display: flex; }
 

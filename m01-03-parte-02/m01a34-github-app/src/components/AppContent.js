@@ -14,9 +14,7 @@ const AppContent = ({
 	getStarred,
 }) => (
   <div className="App">
-
       <div className='container'>
-
 
         <Search handleSearch={handleSearch} />
 
@@ -41,7 +39,7 @@ const AppContent = ({
         {!!starred.length && <Repos
           className='starred p-01'
           title='Favorites'
-          repos={starred}
+          starred={starred}
         />}
       </div>
   </div>

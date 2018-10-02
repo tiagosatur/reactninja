@@ -4,10 +4,10 @@ import propTypes from 'prop-types'
 const Repos = ({ className, title, repos }) => (
   <div className={className}>
     <h3>{title}:</h3>
-    <ul>
+    <ul className='repo__list'>
       {repos.map((repo, i) => (
-        <li key={i}>
-          <a href={repo.link}>{repo.name}</a>
+        <li className='repo__item' key={i}>
+          <a target='_blank' href={repo.link}>{repo.name}</a>
         </li>
       ))}
     </ul>
