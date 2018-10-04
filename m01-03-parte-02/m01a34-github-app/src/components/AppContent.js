@@ -9,6 +9,7 @@ const AppContent = ({
 	userinfo,
 	repos,
 	starred,
+	isFetching,
 	handleSearch,
 	getRepos,
 	getStarred,
@@ -17,6 +18,7 @@ const AppContent = ({
       <div className='container'>
 
         <Search handleSearch={handleSearch} />
+				{isFetching && <div className='loading'></div>}
 
         {/*
           Precisamos que esse valor seja transformado em booleano.
