@@ -24,7 +24,15 @@ class App extends Component {
       starred: [],
 
     }
-  }
+	}
+
+
+	getGitHubApiUrl(username, type) {
+		const treatedlUser = username ? `/${username}` : ''
+		const treatedType = type ? `/${type}` : ''
+
+		return `https://api.github.com/users${treatedlUser}${treatedType}`
+	}
 
   handleSearch(e) {
     const value = e.target.value
@@ -32,7 +40,7 @@ class App extends Component {
     const ENTER = 13
 
     if(keyCode === ENTER) {
-      ajax().get(`https://api.github.com/users/${value}`)
+      ajax().get(this.getGitHubApiUrl(value))
         .then((result) => {
           this.setState({
             userinfo: {
@@ -42,7 +50,9 @@ class App extends Component {
               repos: result.public_repos,
               followers: result.followers,
               following: result.following,
-            }
+            },
+						repos: [],
+						starred: []
           })
         })
     }
@@ -53,10 +63,9 @@ class App extends Component {
 		// This function will return other function to the prop
 		// We'll user arrow function so that we can use this.setState()
 		return (e) => {
+			const username = this.state.userinfo.username
 
-			console.log(type)
-
-			ajax().get(`https://api.github.com/users/${this.state.userinfo.username}/${type}`)
+			ajax().get(this.getGitHubApiUrl(username, type))
 				.then((result) => {
 					this.setState({
 						[type]: result.map((repo) => ({

@@ -30,17 +30,21 @@ const AppContent = ({
         {!!userinfo && <Actions getRepos={getRepos} getStarred={getStarred} />}
 
         {/* Repos será um array. Se não for passado será um array em branco (por isso o length) */}
-        {!!repos.length && <Repos
-          className='repos p-01'
-          title='Repositories'
-          repos={repos}
-        />}
+        {!!repos.length &&
+						<Repos
+	          className='repos p-01'
+	          title='Repositories'
+	          repos={repos}
+	        />
+				}
 
-        {!!starred.length && <Repos
-          className='starred p-01'
-          title='Favorites'
-          starred={starred}
-        />}
+        {!!starred.length &&
+					<Repos
+	          className='starred p-01'
+	          title='Favorites'
+	          repos={starred}
+	        />
+			}
       </div>
   </div>
 )
