@@ -112,13 +112,27 @@ class App extends Component {
 
 
 
+  /*
+    ***Spread operator***
+    userinfo={this.state.userinfo}
+    repos={this.state.repos}
+    starred={this.state.starred}
+    isFetching={this.state.isFetching}
+
+    IS EQUAL TO
+    {...this.state}
+
+    O spread operator espalha o conteúdo de objetos e arrays.
+  */
+
   render() {
     return (
       <AppContent
-        userinfo={this.state.userinfo}
+        /*userinfo={this.state.userinfo}
         repos={this.state.repos}
         starred={this.state.starred}
-				isFetching={this.state.isFetching}
+				isFetching={this.state.isFetching}*/
+        {...this.state}
         handleSearch={(e) => this.handleSearch(e)}
 				getRepos={this.getRepos('repos')}
 				getStarred={this.getRepos('starred')}
