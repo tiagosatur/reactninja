@@ -15,6 +15,29 @@ Smart Components
 */
 
 
+/*
+  ***EcmaScript 5 Bind***
+  Quando vc utiliza a sintaxe React.createClass do ES5, não é preciso declarar explicitamente o bind.
+  O react faz o autobind pra você. Exemplo:
+
+  const App = React.createClass({
+      handleClick: function (e) {
+        this.setState({})
+      }
+
+      render () {
+      return <button onClick={this.handleClick}>Clique aqui</button>
+      }
+  })
+
+
+  ***EcmaScript 6***
+    É preciso fazer o bind manualmente dentro do constructor. Exemplo:
+    this.handleSearh = this.handleSearch.bind(this)
+    Por isso também é que se usa uma arrow function na hora de passar o método via props,
+    pois ele realiza o bind. Ex: handleSearch={(e) => this.handleSearch(e)}
+*/
+
 class App extends Component {
   constructor() {
     super()
