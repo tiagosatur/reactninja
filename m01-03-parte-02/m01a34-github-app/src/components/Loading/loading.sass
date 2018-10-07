@@ -1,0 +1,21 @@
+@import '../../style/base.sass'
+
+@keyframes donut-spin
+  0%
+    transform: rotate(0deg)
+
+  100%
+    transform: rotate(360deg)
+
+
+.loading
+
+  &__icon
+    animation: donut-spin 1.2s linear infinite
+    border: 4px solid rgba(0, 0, 0, 0.1)
+    border-left-color: $c-featured
+    border-radius: 50%
+    display: inline-block
+    height: 30px
+    margin: 50px auto 50px auto
+    width: 30px

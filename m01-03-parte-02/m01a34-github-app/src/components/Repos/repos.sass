@@ -1,0 +1,21 @@
+@import '../../style/base.sass'
+
+.repos,
+.starred
+  a
+    transition: all .4s
+
+    &:hover
+      color: $c-featured
+
+.repo
+  &__list
+    display: flex
+    flex-direction: column
+    list-style: disc
+    margin-left: 32px
+
+  &__item
+  	a
+  		display: inline-block
+  		padding: 8px

@@ -47,30 +47,8 @@ ul
 
 
 
-.App
-  background-color: $c-bg-app
-
-.container
-  max-width: 400px
-  margin: 0 auto
-
-  @media (min-width: $breakpoint-sm)
-    max-width: 600px
-
-
-.search
-
-  input
-    color: $c-primary
-    padding: 0.5rem
-    width: 100%
-
-.avatar
-  img
-    height: auto
-    max-width: 300px
-    max-height: 250px
-    width: auto
+.d-flex
+  display: flex
 
 .flex-column
   flex-direction: column
@@ -79,52 +57,6 @@ ul
   &-sm
     @media(min-width: $breakpoint-sm)
       flex-direction: row
-
-.actions
-  button
-    width: 50%
-
-.repos,
-.starred
-  a
-    transition: all .4s
-
-    &:hover
-      color: $c-featured
-
-.repo
-	&__list
-		display: flex
-		flex-flow: column
-		list-style: disc
-		margin-left: 32px
-
-	&__item
-		a
-			display: flex
-			padding: 8px 0
-
-
-
-@keyframes donut-spin
-  0%
-    transform: rotate(0deg)
-
-  100%
-    transform: rotate(360deg)
-
-
-.loading
-  display: inline-block
-  border: 4px solid rgba(0, 0, 0, 0.1)
-  border-left-color: $c-featured
-  border-radius: 50%
-  width: 30px
-  height: 30px
-  animation: donut-spin 1.2s linear infinite
-
-.d-flex
-  display: flex
 
 .justify-content-center
   justify-content: center

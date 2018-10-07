@@ -1,5 +1,7 @@
 import React from 'react'
 import propTypes from 'prop-types'
+import './userinfo.css'
+
 
 const UserInfo = ({ userinfo }) => (
   <div className='user-info d-flex flex-column flex-row-sm justify-content-between-sm p-01'>

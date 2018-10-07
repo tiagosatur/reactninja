@@ -1,4 +1,5 @@
 import React from 'react'
+import './actions.css'
 
 const Actions = ({ getRepos, getStarred }) => (
   <div className='actions d-flex justify-content-between p-01'>

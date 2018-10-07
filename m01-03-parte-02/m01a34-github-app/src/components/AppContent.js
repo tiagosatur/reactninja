@@ -1,9 +1,10 @@
 import React from 'react'
 import propTypes from 'prop-types'
-import Search from './Search';
-import UserInfo from './UserInfo';
-import Actions from './Actions';
-import Repos from './Repos';
+import Search from './Search/Search';
+import UserInfo from './UserInfo/UserInfo';
+import Actions from './Actions/Actions';
+import Repos from './Repos/Repos';
+import Loading from './Loading/Loading';
 
 const AppContent = ({
 	userinfo,
@@ -18,7 +19,8 @@ const AppContent = ({
       <div className='container'>
 
         <Search handleSearch={handleSearch} />
-				{isFetching && <div className='loading'></div>}
+				{isFetching && <Loading />}
+
 
         {/*
           Precisamos que esse valor seja transformado em booleano.
@@ -32,21 +34,24 @@ const AppContent = ({
         {!!userinfo && <Actions getRepos={getRepos} getStarred={getStarred} />}
 
         {/* Repos será um array. Se não for passado será um array em branco (por isso o length) */}
-        {!!repos.length &&
-						<Repos
-	          className='repos p-01'
-	          title='Repositories'
-	          repos={repos}
-	        />
-				}
+				<div className='repos__container d-flex flex-column flex-row-sm justify-content-between'>
+						{!!repos.length &&
+								<Repos
+			          className='repos p-01'
+			          title='Repositories'
+			          repos={repos}
+			        />
+						}
 
-        {!!starred.length &&
-					<Repos
-	          className='starred p-01'
-	          title='Favorites'
-	          repos={starred}
-	        />
-			}
+		        {!!starred.length &&
+							<Repos
+			          className='repos p-01'
+			          title='Favorites'
+			          repos={starred}
+			        />
+					}
+				</div>
+
       </div>
   </div>
 )

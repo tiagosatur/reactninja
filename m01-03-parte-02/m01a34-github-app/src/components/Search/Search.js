@@ -1,5 +1,6 @@
 import React from 'react'
 import propTypes from 'prop-types'
+import './search.css'
 // import ajax from '@fdaciuk/ajax'
 
 const Search = ({ handleSearch }) => (
