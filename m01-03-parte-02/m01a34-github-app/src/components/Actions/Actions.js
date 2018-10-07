@@ -1,4 +1,5 @@
 import React from 'react'
+import propTypes from 'prop-types'
 import './actions.css'
 
 const Actions = ({ getRepos, getStarred }) => (
@@ -8,4 +9,9 @@ const Actions = ({ getRepos, getStarred }) => (
   </div>
 )
 
+
+Actions.propTypes = {
+  getRepos: propTypes.func.isRequired,
+  getStarred: propTypes.func.isRequired
+}
 export default Actions
