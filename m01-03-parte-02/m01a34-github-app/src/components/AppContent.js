@@ -18,7 +18,7 @@ const AppContent = ({
   <div className="App">
       <div className='container'>
 
-        <Search handleSearch={handleSearch} />
+        <Search handleSearch={handleSearch} isDisabled={isFetching} />
 				{isFetching && <Loading />}
 
 

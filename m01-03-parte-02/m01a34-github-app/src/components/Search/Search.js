@@ -3,12 +3,13 @@ import propTypes from 'prop-types'
 import './search.css'
 // import ajax from '@fdaciuk/ajax'
 
-const Search = ({ handleSearch }) => (
+const Search = ({ handleSearch, isDisabled }) => (
   <div className='search p-05 mb-02'>
     <input
       type="text"
       placeholder='Which GitHub user are you looking for?'
       onKeyUp={handleSearch}
+      disabled={isDisabled}
       /*
         Quem gerencia nossa aplicação é o App.js, logo, o componente Search deve
         só receber tudo via props

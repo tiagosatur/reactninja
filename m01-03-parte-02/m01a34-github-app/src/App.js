@@ -22,6 +22,7 @@ class App extends Component {
       userinfo: null,
       repos: [],
       starred: [],
+      isFetching: false,
 
     }
 	}
