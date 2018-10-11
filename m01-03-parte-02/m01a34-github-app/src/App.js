@@ -4,19 +4,19 @@ import AppContent from './components/AppContent';
 import './style/App.css';
 
 /*
-** Presentational/Dumb components
-Componentes que apenas apresentam as informações,
- não possuem e nem modificam estados, não sabem o que devem fazer.
- A única coisa que sabem é que devem renderizar propriedades
 
-Smart Components
+  *** Presentational/Dumb components
+  Componentes que apenas apresentam as informações,
+  não possuem e nem modificam estados, não sabem o que devem fazer.
+  A única coisa que sabem é que devem renderizar propriedades
+
+  *** Smart Components
   Possuem e manipulam estado
 
-*/
+------ // ------
 
 
-/*
-  ***EcmaScript 5 Bind***
+  *** EcmaScript 5 Bind ***
   Quando vc utiliza a sintaxe React.createClass do ES5, não é preciso declarar explicitamente o bind.
   O react faz o autobind pra você. Exemplo:
 
@@ -31,11 +31,34 @@ Smart Components
   })
 
 
-  ***EcmaScript 6***
+  *** EcmaScript 6 ***
     É preciso fazer o bind manualmente dentro do constructor. Exemplo:
     this.handleSearh = this.handleSearch.bind(this)
     Por isso também é que se usa uma arrow function na hora de passar o método via props,
     pois ele realiza o bind. Ex: handleSearch={(e) => this.handleSearch(e)}
+
+
+  *** Spread Operator
+    const obj = {
+      prop1: 1,
+      prop2: 2,
+      prop3: 3
+    }
+
+    const obj2 = { ...obj }
+
+    console.log(obj2 === obj) //false, pois cria uma nova referência em memória
+
+    É possível usar o spread operator para passar props para os componentes em JSX,
+    e também como rest parameters em funções.
+
+    const arr = [1, 2, 3]
+
+    function sum(x, y, z) {
+      return x + y + z;
+    }
+
+    sum(...arr) // 6
 */
 
 class App extends Component {
