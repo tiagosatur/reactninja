@@ -1,11 +1,13 @@
-import React, { Component } from 'react';
-import Sum from './Sum';
+import sum from './Sum';
 
-export default function SumTest() {
-  return (
-    <div>
-      <h3>Testa a soma</h3>
-    2 + 7 é igual a 9? {<Sum x={2} y={7} /> == 9 ? 'true' : 'false'}
-    </div>
-  )
-}
+console.assert(
+  typeof sum === 'function',
+  'Sum deve ser uma função.'
+)
+
+console.assert(
+  sum(1, 2) === 3,
+  'Should sum(1, 2) return 3.'
+)
+
+console.log('Todos os testes passaram');
