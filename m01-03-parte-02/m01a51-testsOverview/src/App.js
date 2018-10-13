@@ -55,9 +55,38 @@ class App extends Component {
           Por isso, é melhor executá-los usando node, enquanto está desenvolvendo, e não no browser.
         </p>
         <p>
-
-          
+          No terminal, acesse a pasta src/components/title/ e execute o comando:
+          <code>
+            <pre>
+              node TitleTest.js
+            </pre>
+          </code>
         </p>
+        <p>
+          Você verá o resultado:
+          <pre>
+            <code>
+              h1 <br />
+              All tests passed successfully!
+            </code>
+          </pre>
+        </p>
+
+
+        <span>Esse é o teste que está sendo feito</span>
+        <pre>
+          <code>
+            const TitleComponent = ReactDOMServer.renderToStaticMarkup( <br />
+              React.createElement(Title) <br />
+            ) <br /> <br />
+
+            console.log($(TitleComponent).get(0).tagName); //Retorna qual tag está sendo usada <br /> <br />
+
+            console.assert($(TitleComponent).get(0).tagName === 'h1', 'Should be an h1 tag') <br /> <br />
+
+            console.log('All tests passed successfully!')
+          </code>
+        </pre>
 
       </div>
     );
