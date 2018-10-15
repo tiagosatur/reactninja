@@ -4,7 +4,18 @@
   2. it
   3. expect
 
+  *** it *****
   it() === test()
+
+  it('1 é igual a 1', () => {
+    expect(1).toBe(1)
+  })
+
+  it('1 é igual a 1', () => {
+    expect(1).toBe(2)
+  })
+
+
   *** describe() ***
   - A função describe() cria um escopo para os testes
   - Pirmeiro parametro é a descrição, e o segundo é a função que
@@ -24,12 +35,16 @@
   espera (expressão) seja igual a um valor determinado. BDD é um conjunto
   de melhores praticas para escrever testes e deve ser usado em conjunto com TDD.
   Para o BDD, você não deve testar a implementação, mas sim o comportamento.
+
+  configure o package.json para saber % do código coberta por testes:
+  "scripts": {
+    "test": "jest --coverage"
+  },
 */
 
-it('1 é igual a 1', () => {
-  expect(1).toBe(1)
-})
+const expect = require('chai').expect
+const sum = require('./sum')
 
-it('1 é igual a 1', () => {
-  expect(1).toBe(2)
+it('Sum should be a function', () => {
+  expect(sum).to.be.a('function')
 })

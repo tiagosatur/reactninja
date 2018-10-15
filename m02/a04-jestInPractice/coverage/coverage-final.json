@@ -1,0 +1,2 @@
+{"/home/tiagosatur/Documents/reactninja/m02/a04-jestInPractice/sum.js": {"path":"/home/tiagosatur/Documents/reactninja/m02/a04-jestInPractice/sum.js","statementMap":{"0":{"start":{"line":1,"column":0},"end":{"line":1,"column":25}}},"fnMap":{"0":{"name":"(anonymous_0)","decl":{"start":{"line":1,"column":17},"end":{"line":1,"column":18}},"loc":{"start":{"line":1,"column":23},"end":{"line":1,"column":25}},"line":1}},"branchMap":{},"s":{"0":1},"f":{"0":0},"b":{},"_coverageSchema":"332fd63041d2c1bcb487cc26dd0d5f7d97098a6c","hash":"0aefee5ba9e2aaa57e22226e5a1983db165d3fba"}
+}
