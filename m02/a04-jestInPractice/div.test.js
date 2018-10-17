@@ -18,4 +18,9 @@ it('div(10, 2) should return 5', () => {
   Enter - vai rodar a última configuração de testes que vc fez
   p - é possível filtrar o nome do arquivo que vc quer rodar o teste
   q - sai do modo watch
+
+  Métodos disponíveis para criar as asserções
+  https://www.chaijs.com/api/bdd/
+
+  https://jestjs.io/docs/en/api
 */
