@@ -42,9 +42,19 @@
   },
 */
 
-const expect = require('chai').expect
-const sum = require('./sum')
+// ES5
+// const expect = require('chai').expect
+// const sum = require('./sum')
+
+//ES6
+import { expect } from 'chai'
+import sum from './sum'
+
 
 it('Sum should be a function', () => {
   expect(sum).to.be.a('function')
+})
+
+it('sum(1, 2) should return 3', () => {
+  expect(sum(1, 2)).to.be.equal(3)
 })
