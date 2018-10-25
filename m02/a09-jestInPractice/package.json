@@ -1,7 +1,7 @@
 {
   "scripts": {
     "test": "jest --coverage",
-    "test:watch": "npm test -- --watch"
+    "test:watch": "test -- --watch"
   },
   "dependencies": {
     "jest-cli": "^23.6.0"
