@@ -35,9 +35,10 @@ it('map([1, 2], (item, index, array) => array) should return [[1, 2], [1, 2]]', 
 
 // Podemos usar o TypeError do Chai - https://www.chaijs.com/api/bdd/
 // para especificarmos a mensagem de erro junto com o teste: .throw([errorLike], [errMsgMatcher], [msg])
-// Também especificamos que se uma função não for passada por parâmetro,
+// Também especificamos que, se uma função não for passada por parâmetro,
 // ela retorna o próprio item: func = (item) => item
 // Esse teste não irá funcionar, já que estamos atribuindo um valor padrão caso a função não seja passada.
+/*
 it('map should throw an error with the message "Function must be passed!"', () => {
   expect(map).to.throw(TypeError, /Function must be passed!/)
 })
@@ -47,6 +48,9 @@ it('map should throw an error with the message "Function must be passed!"', () =
 
 // Esse último teste não irá disparar, pois primeiro está sendo testado se
 // é uma função. Por isso que se não for passado um array, há o parametro default: array em branco
+
 it('map should throw an error with the message "arr is not an array!"', () => {
   expect(map).to.throw(TypeError, /arr is not an array!/)
 })
+
+*/
