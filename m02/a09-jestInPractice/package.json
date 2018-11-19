@@ -3,6 +3,10 @@
     "test": "jest --coverage",
     "test:watch": "jest --coverage --watch"
   },
+  "jest": {
+    "verbose": true,
+    "collectCoverageFrom": ["**/*.{js,jsx}", "!**/node_modules/**", "!**/vendor/**"]
+  },
   "dependencies": {
     "jest-cli": "^23.6.0"
   },
